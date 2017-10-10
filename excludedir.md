@@ -1,4 +1,12 @@
-SE3 et seven : problème de remontee des profils itinérants
+# SE3 et seven : problème de remontée des profils itinérants
+Samuel GONZALES – Raip de Strasbourg
+
+## Le problème
+Certains profils itinerants seven pèsent lourd. Ces profils sont stocke sur le serveur dans l’arborescence /home/profiles/USERNAME.V2 ou alors sont visibles via le partage reseau \\$IPSERVEUR\admhomes\profiles. Ces profils itinerants gonflent lorsque la cle de base de registre
+
+HKEY CURRENT USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon ”Exclude-ProfileDirs” est mal ajustee.
+
+
 #Accès à mysql
 mysql -D se3db
 #Info : Lister les noms et types des colonnes
