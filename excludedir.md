@@ -3,7 +3,7 @@ Samuel GONZALES – Raip de Strasbourg
 
 ## Le problème
 Certains profils itinerants seven pèsent lourd. Ces profils sont stocke sur le serveur dans l’arborescence /home/profiles/USERNAME.V2 ou alors sont visibles via le partage reseau \\$IPSERVEUR\admhomes\profiles. Ces profils itinerants gonflent lorsque la cle de base de registre
-''**HKEY CURRENT USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon ”Exclude-ProfileDirs”**''
+> **HKEY CURRENT USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon ”Exclude-ProfileDirs”**
 est mal ajustée.
 
 
