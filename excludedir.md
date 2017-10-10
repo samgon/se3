@@ -1,3 +1,4 @@
+SE3 et seven : problème de remontee des profils itinérants
 #Accès à mysql
 mysql -D se3db
 #Info : Lister les noms et types des colonnes
