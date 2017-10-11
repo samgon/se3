@@ -61,7 +61,7 @@ rm -rf  /home/profiles/*.V*/AppData/LocalLow
 rm -rf  /home/profiles/*.V*/AppData/Local
 ```
 
-Remarques :
+**Remarques :**
 
 1 - Reste encore à traiter le cas du/des dossiers Geogébra qui apparaissent dans /hom/profile/$USER.V2/GeoGebra $VERSION/
 
