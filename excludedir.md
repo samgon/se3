@@ -2,12 +2,12 @@
 Samuel GONZALES – Raip de Strasbourg
 
 ## Le problème
-Certains profils itinerants seven pèsent lourd. Ces profils sont stocke sur le serveur dans l’arborescence /home/profiles/USERNAME.V2 ou alors sont visibles via le partage reseau \\$IPSERVEUR\admhomes\profiles. Ces profils itinerants gonflent lorsque la cle de base de registre
+Certains profils itinerants seven ou win10 pèsent lourd. Ils sont stockés sur le serveur dans l’arborescence /home/profiles/USERNAME.V2 ou .V6 et sont visibles via le partage reseau \\$IPSERVEUR\admhomes\profiles. Ces profils itinerants gonflent lorsque la cle de base de registre
 > **HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\ExcludeProfileDirs**
 
-est mal ajustée, car appliquée telle quelle sur un poste win7 ou supérieur elle entraine la remontée sur le serveur d'une partie **lourde** du profil local (cache des applications google, etc...).
+est mal ajustée, car appliquée telle quelle (par exemple via un template, voire un vieux template désactivé) sur un poste win7 ou supérieur elle entraine la remontée sur le serveur d'une partie **lourde** du profil local (cache des applications google, etc...). Pour ce rendre compte de ce problème il suffit de regarder la clé avec regedit.
 
-Par défaut la valeur est fixée à 
+Par défaut sur SE3 la valeur est fixée à 
 > 'Local Settings;Temporary Internet Files;Historique;Temp;Application Data'
 
 Ce qui ne va pas pour du win7 dont la clé a par défaut la valeur suivante :
@@ -28,7 +28,7 @@ Sa valeur devrait donc être :
 
 > Local Settings;Temporary Internet Files;Historique;Temp;Application Data;AppData\\Local;AppData\\LocalLow;$Recycle.Bin;OneDrive;Work Folders
 
-Sauf que cette chaîne est formée de plus de 100 caractères qui est la limite de la colonne 'valeur' de la table 'se3db.corresp'. Il faut donc modifier cette valeur de la manière suivante :
+Sauf que cette chaîne est formée de plus de 100 caractères qui est la limite de la colonne 'valeur' de la table 'se3db.corresp'. Il faut donc modifier cette valeur de la manière suivante en se connectant en root sur le serveur (via putty par exemple, il suffit ensuite de faire du copier/coller):
 
 *#Accès à mysql*
 
@@ -53,3 +53,5 @@ Sauf que cette chaîne est formée de plus de 100 caractères qui est la limite 
 *#quitter*
 
 >mysql> quit
+
+Finalement, on peut appliquer cette clé au template de base pour qu'elle remonte sur les postes pour chaque profil. 
