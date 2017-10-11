@@ -20,7 +20,7 @@ Si la clé de registre excludedir est insérée dans le template de base, c'est 
 
 ## Deux solutions
 
-1 - 
+1 - Première idée : créer une clé spécifique **"excludedirwin7"** et **"excludedirwin10"** mais ce n'est pas possible car le chemin de la clé doit être unique... et comme c'est le même pour chaque version de windows mysql n'est pas d'accord (ou alors il faut modifier la table se3db.corresp
 
 
 
