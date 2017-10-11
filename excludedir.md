@@ -54,4 +54,19 @@ Sauf que cette chaîne est formée de plus de 100 caractères qui est la limite 
 
 >mysql> quit
 
-Finalement, on peut appliquer cette clé au template de base pour qu'elle remonte sur les postes pour chaque profil. 
+Finalement, on peut appliquer cette clé au template de base pour qu'elle remonte sur les postes pour chaque profil. Et il faut encore supprimer les dossiers qui surchargent le profil itinérant :
+
+>#rm -rf  /home/profiles/*.V*/AppData/LocalLow
+>#rm -rf  /home/profiles/*.V*/AppData/Local
+
+Remarques :
+
+1 - Reste encore à traiter le cas du/des dossiers Geogébra qui apparaissent dans /hom/profile/$USER.V2/GeoGebra $VERSION/
+
+2 - Pour les bienheureux qui n'ont plus xp ou de vista, la clé sera plus simplement
+
+>AppData\\Local;AppData\\LocalLow;$Recycle.Bin;OneDrive;Work Folders
+
+3 - Toutes remarques sont les bienvenues.
+
+
