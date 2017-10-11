@@ -28,7 +28,7 @@ Sa valeur devrait donc être :
 
 > Local Settings;Temporary Internet Files;Historique;Temp;Application Data;AppData\\Local;AppData\\LocalLow;$Recycle.Bin;OneDrive;Work Folders
 
-Sauf que cett chaîne de caractères 
+Sauf que cette chaîne est formée de plus de 100 caractères qui est la limite de la colonne 'valeur' de la table 'se3db.corresp'. Il faut donc modifier cette valeur de la manière suivante :
 
 > #Accès à mysql
 
@@ -38,13 +38,13 @@ Sauf que cett chaîne de caractères
 
 > show columns from corresp;
 
-> #Passer de 100 à 120 le nombre de caractères dans la colonne valeur
+> #Passer de 100 à 150 le nombre de caractères dans la colonne valeur
 
-> alter table corresp modify valeur varchar(120) NOT NULL DEFAULT '';
+> alter table corresp modify valeur varchar(150) NOT NULL DEFAULT '';
 
 > #Modifier la valeur de la clé excludedir
 
-> update corresp set valeur = 'Local Settings;Temporary Internet Files;Historique;Temp;Application Data;AppData\\Local;AppData\\LocalLow' where Intitule = 'excludedir' ;
+> update corresp set valeur = 'Local Settings;Temporary Internet Files;Historique;Temp;Application Data;AppData\\Local;AppData\\LocalLow;$Recycle.Bin;OneDrive;Work Folders' where Intitule = 'excludedir' ;
 
 > #Vérifier 
 
