@@ -30,13 +30,13 @@ Sa valeur devrait donc être :
 
 Sauf que cette chaîne est formée de plus de 100 caractères qui est la limite de la colonne 'valeur' de la table 'se3db.corresp'. Il faut donc modifier cette valeur de la manière suivante :
 
-> #Accès à mysql
+*#Accès à mysql*
 
 > mysql -D se3db
 
-> #Info : Lister les noms et types des colonnes
+*#Info : Lister les noms et types des colonnes*
 
-> show columns from corresp;
+>mysql> show columns from corresp;
 
 *#Passer de 100 à 150 le nombre de caractères dans la colonne valeur*
 
