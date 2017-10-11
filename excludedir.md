@@ -63,12 +63,12 @@ rm -rf  /home/profiles/*.V*/AppData/Local
 
 **Remarques :**
 
-1 - Reste encore à traiter le cas du/des dossiers Geogébra qui apparaissent dans /hom/profile/$USER.V2/GeoGebra $VERSION/
+1 - Reste encore à traiter le cas du/des dossiers Geogébra qui apparaissent dans /home/profile/$USER.V2/GeoGebra $VERSION/
 
 2 - Pour les bienheureux qui n'ont plus xp ou de vista, il est inutile alors de modifier le nombre de caractères autorisés dans la table corresp. La clé sera alors la suivante :
 
 >AppData\\Local;AppData\\LocalLow;$Recycle.Bin;OneDrive;Work Folders
 
-3 - Toutes les remarques sont les bienvenues.
+3 - Toutes les remarques sont les bienvenues!
 
 
