@@ -56,9 +56,9 @@ Sauf que cette chaîne est formée de plus de 100 caractères qui est la limite 
 
 Finalement, on peut appliquer cette clé au template de base pour qu'elle remonte sur les postes pour chaque profil. Et il faut encore supprimer les dossiers qui surchargent le profil itinérant :
 
-> ̀`#rm -rf  /home/profiles/*.V*/AppData/LocalLow
-
-#rm -rf  /home/profiles/*.V*/AppData/Local`
+```sh
+rm -rf  /home/profiles/*.V*/AppData/LocalLow 
+rm -rf  /home/profiles/*.V*/AppData/Local```
 
 Remarques :
 
