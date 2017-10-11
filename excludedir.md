@@ -40,16 +40,16 @@ Sauf que cette chaîne est formée de plus de 100 caractères qui est la limite 
 
 *#Passer de 100 à 150 le nombre de caractères dans la colonne valeur*
 
-> alter table corresp modify valeur varchar(150) NOT NULL DEFAULT '';
+>mysql> alter table corresp modify valeur varchar(150) NOT NULL DEFAULT '';
 
-*#Modifier la valeur de la clé excludedir*
+*#Modifier la valeur de la clé excludedir. __Attention il faut absolument les double antislash__*
 
- update corresp set valeur = 'Local Settings;Temporary Internet Files;Historique;Temp;Application Data;AppData\\\Local;AppData\\\LocalLow;$Recycle.Bin;OneDrive;Work Folders' where Intitule = 'excludedir' ;
+>mysql> update corresp set valeur = 'Local Settings;Temporary Internet Files;Historique;Temp;Application Data;AppData\\\Local;AppData\\\LocalLow;$Recycle.Bin;OneDrive;Work Folders' where Intitule = 'excludedir' ;
 
-> #Vérifier 
+*#Vérifier*
 
-> select valeur from corresp where Intitule = 'excludedir';
+>mysql> select valeur from corresp where Intitule = 'excludedir';
 
-> #quitter 
+*#quitter*
 
-> quit
+>mysql> quit
