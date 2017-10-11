@@ -63,10 +63,10 @@ Remarques :
 
 1 - Reste encore à traiter le cas du/des dossiers Geogébra qui apparaissent dans /hom/profile/$USER.V2/GeoGebra $VERSION/
 
-2 - Pour les bienheureux qui n'ont plus xp ou de vista, la clé sera plus simplement
+2 - Pour les bienheureux qui n'ont plus xp ou de vista, il est inutile alors de modifier le nombre de caractères autorisés dans la table corresp. La clé sera alors la suivante :
 
 >AppData\\Local;AppData\\LocalLow;$Recycle.Bin;OneDrive;Work Folders
 
-3 - Toutes remarques sont les bienvenues.
+3 - Toutes les remarques sont les bienvenues.
 
 
