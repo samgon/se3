@@ -8,7 +8,7 @@ Certains profils itinerants seven ou win10 pèsent lourd. Ils sont stockés sur 
 est mal ajustée, car appliquée telle quelle (par exemple via un template, voire un vieux template désactivé) sur un poste win7 ou supérieur elle entraine la remontée sur le serveur d'une partie **lourde** du profil local (cache des applications google, etc...). Pour ce rendre compte de ce problème il suffit de regarder la clé avec regedit.
 
 Par défaut sur SE3 la valeur est fixée à 
-> 'Local Settings;Temporary Internet Files;Historique;Temp;Application Data'
+> Local Settings;Temporary Internet Files;Historique;Temp;Application Data
 
 Ce qui ne va pas pour du win7 dont la clé a par défaut la valeur suivante :
 > AppData\\Local;AppData\\LocalLow;$Recycle.Bin
