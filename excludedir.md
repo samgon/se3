@@ -58,7 +58,8 @@ Finalement, on peut appliquer cette clé au template de base pour qu'elle remont
 
 ```sh
 rm -rf  /home/profiles/*.V*/AppData/LocalLow 
-rm -rf  /home/profiles/*.V*/AppData/Local```
+rm -rf  /home/profiles/*.V*/AppData/Local
+```
 
 Remarques :
 
