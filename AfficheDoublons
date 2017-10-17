@@ -1,0 +1,15 @@
+#!/bin/bash
+echo "Ce script liste les dossiers de /home et vérifie les propriétaires autres que admin ou root."
+echo "Si le propriétaire ne correspond pas au nom du dossier, c'est qu'il y un problème et un risque d'overquota."
+echo "Un nettoyage s'impose donc."
+ListeProblemes=/var/www/se3/ListeHome.log
+echo "Liste des problèmes : " > $ListeProblemes
+for dossier in $(ls /home)
+do
+proprio=$(/usr/bin/stat -c%U /home/$dossier)
+if [ "$proprio" != "$dossier" ] && [ $proprio != "admin" ] && [ $proprio != "root" ]
+then
+echo "Problème avec l'utilisateur $proprio qui est propriétaire à tort du dossier suivant : /home/$dossier "  >> $ListeProblemes
+ls -ald /home/$dossier >> $ListeProblemes
+fi
+done
